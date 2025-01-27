@@ -73,7 +73,7 @@ describe('Testes dos Módulos Usuario e Auth (e2e)', () => {
     token = resposta.body.token;
   });
 
-  it('04 - Deve listar todos os usuários', async () => {
+  it('04 - Deve listar todos os Usuários', async () => {
     return await request(app.getHttpServer())
       .get('/usuarios/all')
       .set('Authorization', `${token}`)
