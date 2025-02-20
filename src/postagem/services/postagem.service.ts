@@ -59,6 +59,7 @@ export class PostagemService {
   }
 
   async update(postagem: Postagem): Promise<Postagem> {
+    console.log(`id da postagem: ${postagem.id}`);
     if (postagem.id || postagem.id <= 0)
       throw new HttpException('Postagem inválida!', HttpStatus.BAD_REQUEST);
     await this.findById(postagem.id);
