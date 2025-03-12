@@ -34,6 +34,10 @@ export class Usuario {
   @ApiProperty()
   foto: string;
 
+  @Column({ type: 'date' })
+  @ApiProperty({ example: '1999-12-31' })
+  data_aniversario: Date;
+
   @ApiProperty()
   @OneToMany(() => Postagem, (postagem) => postagem.usuario)
   postagem: Postagem[];
