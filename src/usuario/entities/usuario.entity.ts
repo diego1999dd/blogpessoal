@@ -36,7 +36,7 @@ export class Usuario {
 
   @Column({ type: 'date' })
   @ApiProperty({ example: '1999-12-31' })
-  data_aniversario: Date;
+  data_aniversario: string;
 
   @ApiProperty()
   @OneToMany(() => Postagem, (postagem) => postagem.usuario)
